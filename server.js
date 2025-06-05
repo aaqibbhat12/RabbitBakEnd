@@ -18,7 +18,7 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors)
+app.use(cors())
 app.use(express.json()); // ✅ Needed to parse JSON request body
 
 // Connect to MongoDB
@@ -33,7 +33,7 @@ app.use(express.json()); // ✅ Needed to parse JSON request body
 
 // Routes
 app.get('/', (req, res) => {
-    res.send('Hello from rabbit');
+    res.send('Hello from rabbitclothing');
 });
 
 app.use('/api/users', userRoutes);
